@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LocaleRusEn</string>
+    <string-array name="lan">
+        <item>Русский язык</item>
+        <item>Английский язык</item>
+
+    </string-array>
+</resources>
