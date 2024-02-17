@@ -5,4 +5,6 @@
         <item>English language</item>
 
     </string-array>
+    <string name="button">Button</string>
+    <string name="textView">Hello</string>
 </resources>
