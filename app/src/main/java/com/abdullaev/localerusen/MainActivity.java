@@ -16,21 +16,21 @@ import org.intellij.lang.annotations.Language;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-
     Button buttonLocal;
     Spinner spinnerLocal;
     TextView text;
-
     enum Language{
         ru, en
     }
-
     Language language = Language.en;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         view();
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.lan));
         spinnerLocal.setAdapter(adapter);
         buttonLocal.setOnClickListener(new View.OnClickListener() {
@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 recreate();
             }
         });
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         spinnerLocal.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -65,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     public void view() {
         buttonLocal = findViewById(R.id.button);
         spinnerLocal = findViewById(R.id.spinner);
